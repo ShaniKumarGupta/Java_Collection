@@ -1,0 +1,607 @@
+******************* Collections in Java *************************
+******************* Add an element into Array list using Collection ***********************************
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+	}
+}
+
+
+
+********************************************************************************************************
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+	}
+}
+
+
+****************************************************************************************************************************
+
+Retriveing the data value and update the data value of array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+	}
+}
+
+******************************************************************************************************************************
+
+// Remove the element fron array list and searching the element 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+	}
+}
+
+*********************************************************************************************************************
+/// Searching elements of an array list
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+	}
+}
+
+****************************************************************************************************************************
+
+/// Sorting
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		// Sort a given array list
+		Collections.sort(list_Strings);
+		System.out.println(list_Strings);
+	}
+}
+
+***********************************************************************************************************************
+
+// Copy
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		List<String> list2 = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		list2.add("Shani"); // Data Value
+		list2.add("Vivek");
+		list2.add("Prince");
+		list2.add("Aman");
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		// Sort a given array list
+		Collections.sort(list_Strings);
+		System.out.println("List after Sort: "+list_Strings);
+		
+		// Copy one array list into another
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		System.out.println("Copy the Array list into another array list:");
+		
+		Collections.copy(list_Strings,list2);
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+	}
+}
+
+*****************************************************************************************************************
+
+// Shuffle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		List<String> list2 = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		list2.add("Shani"); // Data Value
+		list2.add("Vivek");
+		list2.add("Prince");
+		list2.add("Aman");
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		// Sort a given array list
+		Collections.sort(list_Strings);
+		System.out.println("List after Sort: "+list_Strings);
+		
+		// Copy one array list into another
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		System.out.println("Copy the Array list into another array list:");
+		
+		Collections.copy(list_Strings,list2);
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		// Shuffle elements in a array list
+		System.out.println(list_Strings);
+		Collections.shuffle(list_Strings);
+		System.out.println("List after shuffle:\n"+list_Strings);
+		
+	}
+}
+
+*****************************************************************************************************************
+
+// Reverse the array list
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		List<String> list2 = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		list2.add("Shani"); // Data Value
+		list2.add("Vivek");
+		list2.add("Prince");
+		list2.add("Aman");
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		// Sort a given array list
+		Collections.sort(list_Strings);
+		System.out.println("List after Sort: "+list_Strings);
+		
+		// Copy one array list into another
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		System.out.println("Copy the Array list into another array list:");
+		
+		Collections.copy(list_Strings,list2);
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		// Shuffle elements in a array list
+		System.out.println(list_Strings);
+		Collections.shuffle(list_Strings);
+		System.out.println("List after shuffle:\n"+list_Strings);
+		
+		// Reverse the array list
+		Collections.reverse(list_Strings);
+		System.out.println(list_Strings);
+	}
+}
+
+**************************************************************************************************************************
+
+// Extract the portion of an array list
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    // list_Strings object belong to List class of collection of String type
+		List<String> list_Strings = new ArrayList<String>();//RHS new instance creation
+		List<String> list2 = new ArrayList<String>();//RHS new instance creation
+		list_Strings.add("Red"); // Data Value
+		list_Strings.add("Green");
+		list_Strings.add("Yellow");
+		list_Strings.add("White");
+		list_Strings.add("Black"); // Time Complexity O(1)
+		//System.out.println(list_Strings);
+		// Disadvantage - we can't access the data value of a data sturuture one by one -- Iteration
+		
+		list2.add("Shani"); // Data Value
+		list2.add("Vivek");
+		list2.add("Prince");
+		list2.add("Aman");
+		
+		for(String element : list_Strings){
+		    // Every element is the separate object 
+		    System.out.println(element);
+		}
+		
+		// Insert an element to the exsisting array
+		list_Strings.add(0,"Pink");
+		list_Strings.add(5,"Blue");
+		System.out.println(list_Strings);
+		
+		String e1 = list_Strings.get(0); // O(1)
+		System.out.println(e1);
+		
+		e1 = list_Strings.get(4);
+		System.out.println(e1);
+		
+		// Update specify element of array
+		list_Strings.set(2, "Shani");
+		System.out.println(list_Strings);
+		
+		list_Strings.remove(2); // O(n)
+		System.out.println(list_Strings);
+		
+		// Searching an element in a array list // O(nlogn)
+		
+		if(list_Strings.contains("Red")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		if(list_Strings.contains("Shani")){
+		    	System.out.println("Found the element");
+		}else{
+		    	System.out.println("There is no such element");
+		}
+		
+		// Sort a given array list
+		Collections.sort(list_Strings);
+		System.out.println("List after Sort: "+list_Strings);
+		
+		// Copy one array list into another
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		System.out.println("Copy the Array list into another array list:");
+		
+		Collections.copy(list_Strings,list2);
+		System.out.println(list_Strings);
+		System.out.println(list2);
+		
+		// Shuffle elements in a array list
+		System.out.println(list_Strings);
+		Collections.shuffle(list_Strings);
+		System.out.println("List after shuffle:\n"+list_Strings);
+		
+		// Reverse the array list
+		Collections.reverse(list_Strings);
+		System.out.println(list_Strings);
+		
+		// Extract a portion of a array list
+		List<String> sub_list = list_Strings.subList(0,4);
+		System.out.println("List of first three elements: "+sub_list);
+	}
+}
+
+***************************************************************************************************************************
+
+// Compare two array lists
+
+
+
+
+
+
