@@ -1,0 +1,53 @@
+*************************************** Collections in Java *************************************************
+*************************************************************************************************************
+
+***************************** Compare, Swap, Clone and Join two Array List *****************************************
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		ArrayList<String> c1 = new ArrayList<String>();
+		c1.add("Red");
+		c1.add("Green");
+		c1.add("Yellow");
+		c1.add("Pink");
+		c1.add("Black");
+		
+		ArrayList<String> c2 = new ArrayList<String>();
+		c2.add("Red");
+		c2.add("Green");
+		c2.add("Blue");
+		c2.add("White");
+		c2.add("Black");
+		
+		ArrayList<String> c3 = new ArrayList<String>();
+		
+		for(String e:c1)
+		c3.add(c2.contains(e)? "Yes" : "No");
+		
+		System.out.println(c3);
+		
+		// Swaping of two ArrayList elements
+		System.out.println(c1);
+		Collections.swap(c1,0,3);
+		System.out.println("Array list after swap");
+		for(String b: c1){
+		    System.out.println(b);
+		}
+		
+		ArrayList<String> a = new ArrayList<String>();
+		
+		// Join two array list
+		a.addAll(c1);
+		a.addAll(c2);
+		System.out.println(a);
+		
+		// Clone an Array list into another Array list
+		System.out.println(c1);
+		ArrayList<String> newc1 = (ArrayList<String>)c1.clone();
+		System.out.println("Cloned Array list: "+newc1);
+	}
+}
+
